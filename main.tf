@@ -3,7 +3,7 @@ provider "aws" {
   profile   = "terra-demo"
 }
 
-# 1. Creat vpc 
+# 1. Create a vpc 
 resource "aws_vpc" "qa-vpc" {
   cidr_block = "10.0.0.0/16"
   tags = {	
@@ -11,7 +11,7 @@ resource "aws_vpc" "qa-vpc" {
   }
 }
 
-# 2. Create Internet gateway
+# 2. Create an Internet gateway
 
 resource "aws_internet_gateway" "gw" {
   vpc_id     = aws_vpc.qa-vpc.id
